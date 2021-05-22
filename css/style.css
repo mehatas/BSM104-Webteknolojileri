@@ -1,29 +1,14 @@
-.resimSlider{
+.imgSlider{
     height: 500px;
 }
-.resimSlider:hover{
+.imgSlider:hover{
  opacity:0.8;
 }
 body{
     padding-top: 50px;
     font-family: 'Raleway', sans-serif;
 }
-.hakkinda{
-    background-color:#FFFFFF;
-}
-.hakkindaGaleri{
-    background-color:#FFFFFF;
-}
-.sehrim{
-    background-color:#FFFFFF;
-}
-.iletisim{
-    background-color:#FFFFFF;
-}
-.mirasimiz{
-    background-color: #FFFFFF;
-}
-.ayrac{
+.brace{
     
     border:none;
     border-top:3px solid  #343a40;
@@ -36,7 +21,6 @@ body{
    margin:25px auto;
 }
 .icon{
-    
     color:  F2F2F2;
     position: relative;
     top:-60px;
@@ -47,7 +31,7 @@ body{
 .figure:hover{
     opacity:0.6;
 }
-.boyut{
+.size{
     height: 175px;
     width: 250px;
 }
@@ -264,38 +248,3 @@ body{
 	.resume_wrapper .resume_right {
 		font-size: 24px;
 	}
-    
-    /***************************/
-    
-    
-     body {
-            background-color: #848484;
-        }
-        .main-section {
-            margin: 0 auto;
-            margin-top: 130px;
-            padding: 0;
-        }
-
-        .modal-content {
-            background-color: #808080;
-            opacity: .95;
-            padding: 0 18px;
-            box-shadow: 0px 0px 3px #848484;
-        }
-
-        .user-img {
-            margin-top: -50px;
-            margin-bottom: 35px;
-        }
-
-        .user-img img {
-            height: 100px;
-            width: 100px;
-            border-radius: 5px;
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-
-        }
