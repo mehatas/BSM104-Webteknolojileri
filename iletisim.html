@@ -64,22 +64,30 @@
 
                 <div class="form-group row">
                     <label for="" class="col-md-4 align-self-center">Ad:</label>
-                    <input type="text" placeholder="Adınızı giriniz.." class="form col-md-8" name="ad" required>
+                    <input type="text" placeholder="Adınızı giriniz.." class="col-md-6" name="ad" required>
                 </div>
+
                 <br>
+
                 <div class="form-group row">
                     <label for="" class="col-md-4 align-self-center">Soyad:</label>
-                    <input type="text" name="soyad" placeholder="Soyadınızı giriniz.." class="col-md-8" required>
+                    <input type="text" name="soyad" placeholder="Soyadınızı giriniz.." class="col-md-6" required>
                 </div>
+
                 <br>
+
                 <div class="form-group row">
                     <label for="" class="col-md-4 align-self-center">E-posta:</label>
-                    <input type="email" name="mail" placeholder="birisi@example.com" required class="col-md-8">
+                    <input type="email" name="mail" placeholder="birisi@example.com" required class="col-md-6">
                 </div>
+
                 <br>
+
                 <div class="form-group row">
                     <label for="" class="col-md-4 align-self-center">Doğum Tarihi(gg:aa:yyyy):</label>
+
                     <input type="number" id="dogumtarihigun" name="dogumtarihigun" class="col-md-1" required min="01" max="31">
+
                     <select name="dogumtarihiay" id="dogumtarihiay" class="col-md-2" required>
                         <option selected></option>
                         <option value="01">Ocak</option>
@@ -95,25 +103,32 @@
                         <option value="11">Kasım</option>
                         <option value="12">Aralık</option>
                     </select>
+
                     <input type="number" name="dogumtarihiyil" class="col-md-2" required min="01" max="2021">
                 </div>
+
                 <br>
+
                 <div class="form-group row">
                     <label for="other" class="col-md-4 align-self-center">Cinsiyet:</label>
                     <input type="radio" name="cinsiyet" value="kadın" class="col-md-2" required>Kadın
                     <input type="radio" name="cinsiyet" value="erkek" class="col-md-2" required>Erkek
                 </div>
+
                 <br>
+
                 <div class="form-group row">
                     <label for="" class="col-md-4 align-self-center">Mesaj:</label>
-                    <textarea placeholder="Göndermek istediğiniz metni yazınız.." id="mesaj" name="mesaj" cols="30" rows="10" class="col-md-8" required></textarea>
+                    <textarea placeholder="Göndermek istediğiniz metni yazınız.." id="mesaj" name="mesaj" cols="30" rows="10" class="col-md-6" required></textarea>
                 </div>
+
                 <br>
+
                 <div class="form-group row">
                     <label for="" class="col-md-4 align-self-center"></label>
                     <br>
-                    <button type="reset" class="col-md-4">Temizle</button>
-                    <button type="submit" class="col-md-4" name="kaydet" id="kaydet"> Gönder </button>
+                    <button type="reset" class="col-md-3">Temizle</button>
+                    <button type="submit" class="col-md-3" name="kaydet" id="kaydet"> Gönder </button>
                 </div>
                 <br>
             </form>

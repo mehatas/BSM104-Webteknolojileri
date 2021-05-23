@@ -18,4 +18,5 @@ echo".$_POST[dogumtarihiyil] <br>";
 echo"E-Mail Adresi: $_POST[mail] <br>";
 echo"Mesaj: $_POST[mesaj] <br>";
 } 
+
 ?>

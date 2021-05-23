@@ -17,6 +17,7 @@
 
     <script src="https://kit.fontawesome.com/b929becbe1.js" crossorigin="anonymous"></script>
 
+
     <title>Web Teknolojileri | Proje</title>
 
 </head>
@@ -65,17 +66,66 @@
             <hr class="brace"><i class="fas fa-play icon"></i>
             <br>
             <p> Boş zamanlarımda futbol oynamayı ve seyretmeyi, film izlemeyi ve şarkı dinlemeyi seviyorum. Aslında pek boş zamanım olmuyor bu yüzden pek ilgi alanım da yok.</p>
-            <p> Sevdiğim filmden bir sahne : </p>
+            <p>
+                Tuttuğum takım Galatasaray, en sevdiğim film Esaretin bedeli ve en sevdiğim şarkı şimdilik Pilli Bebek - Duruyor Zaman.
+            </p>
 
             <div class="carousel-inner">
                 <div class="carousel-item active ">
 
-                    <iframe width="600" height="450" src="https://www.youtube.com/embed/VsuR7_EsApU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+                    <div class="app">
+                        <div class="header">
+                            <h1>Hava Durumu</h1>
+                            <input type="text" id="searchBar" placeholder="Şehir Giriniz..." />
+                        </div>
+                        <div class="content">
+                            <div class="city">Şehir, TR</div>
+                            <div class="temp">°C </div>
+                            <div class="desc">Havanın Durumu</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+
+    <script>
+        const setQuery = (e) => {
+            if (e.keyCode == '13')
+                getResult(searchBar.value)
+
+        }
+
+        const getResult = (cityName) => {
+
+            let query = 'https://api.openweathermap.org/data/2.5/weather?q=' + cityName + '&appid=26b78ad212ef92d58d935129af01a8a9&units=metric&lang=tr'
+
+            fetch(query)
+
+                .then(weather => {
+                    return weather.json()
+
+                })
+                .then(displayResult)
+        }
+        const displayResult = (result) => {
+            let city = document.querySelector('.city')
+            city.innerText = '  ' + result.name + ',' + result.sys.country + '  '
+
+            let temp = document.querySelector('.temp')
+            temp.innerText = '  ' + Math.round(result.main.temp) + '°C'
+
+            let desc = document.querySelector('.desc')
+            desc.innerText = result.weather[0].description
+
+        }
+
+        const searchBar = document.getElementById('searchBar')
+        searchBar.addEventListener('keypress', setQuery)
+
+    </script>
+
 
 
     <div class="text-dark text-center">
@@ -87,7 +137,6 @@
 
 
     <!-- Optional JavaScript; choose one of the two! -->
-
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 

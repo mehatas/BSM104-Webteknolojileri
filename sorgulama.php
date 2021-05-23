@@ -11,10 +11,10 @@ header("location:login.html");
 }
 if($usercontrol == $username and $passcontrol == $password){
     echo "HOŞGELDİNİZ g201210382";
-    header("Refresh: 5; url=index.html");
+    header("Refresh: 3; url=index.html");
 }
 else{ 
-    echo "Kullanıcı Adı Veya Şifre Hatalı..";
+    echo "Kullanıcı adı veya şifre hatalı. Giriş Sayfasına yönlendiriliyorsunuz...";
     header("Refresh: 3; url=login.html");
 }
 ?>
